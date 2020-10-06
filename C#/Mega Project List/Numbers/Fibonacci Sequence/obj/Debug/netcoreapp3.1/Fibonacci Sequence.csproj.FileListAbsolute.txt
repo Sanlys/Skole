@@ -1,0 +1,12 @@
+D:\C#\Mega Project List\Numbers\Fibonacci Sequence\obj\Debug\netcoreapp3.1\Fibonacci Sequence.AssemblyInfoInputs.cache
+D:\C#\Mega Project List\Numbers\Fibonacci Sequence\obj\Debug\netcoreapp3.1\Fibonacci Sequence.AssemblyInfo.cs
+D:\C#\Mega Project List\Numbers\Fibonacci Sequence\obj\Debug\netcoreapp3.1\Fibonacci Sequence.csproj.CoreCompileInputs.cache
+D:\C#\Mega Project List\Numbers\Fibonacci Sequence\bin\Debug\netcoreapp3.1\Fibonacci Sequence.exe
+D:\C#\Mega Project List\Numbers\Fibonacci Sequence\bin\Debug\netcoreapp3.1\Fibonacci Sequence.deps.json
+D:\C#\Mega Project List\Numbers\Fibonacci Sequence\bin\Debug\netcoreapp3.1\Fibonacci Sequence.runtimeconfig.json
+D:\C#\Mega Project List\Numbers\Fibonacci Sequence\bin\Debug\netcoreapp3.1\Fibonacci Sequence.runtimeconfig.dev.json
+D:\C#\Mega Project List\Numbers\Fibonacci Sequence\bin\Debug\netcoreapp3.1\Fibonacci Sequence.dll
+D:\C#\Mega Project List\Numbers\Fibonacci Sequence\bin\Debug\netcoreapp3.1\Fibonacci Sequence.pdb
+D:\C#\Mega Project List\Numbers\Fibonacci Sequence\obj\Debug\netcoreapp3.1\Fibonacci Sequence.dll
+D:\C#\Mega Project List\Numbers\Fibonacci Sequence\obj\Debug\netcoreapp3.1\Fibonacci Sequence.pdb
+D:\C#\Mega Project List\Numbers\Fibonacci Sequence\obj\Debug\netcoreapp3.1\Fibonacci Sequence.genruntimeconfig.cache

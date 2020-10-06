@@ -1,0 +1,13 @@
+D:\C#\Mega Project List\Numbers\Find PI to the Nth Digit\bin\Debug\netcoreapp3.1\Find PI to the Nth Digit.exe
+D:\C#\Mega Project List\Numbers\Find PI to the Nth Digit\bin\Debug\netcoreapp3.1\Find PI to the Nth Digit.deps.json
+D:\C#\Mega Project List\Numbers\Find PI to the Nth Digit\bin\Debug\netcoreapp3.1\Find PI to the Nth Digit.runtimeconfig.json
+D:\C#\Mega Project List\Numbers\Find PI to the Nth Digit\bin\Debug\netcoreapp3.1\Find PI to the Nth Digit.runtimeconfig.dev.json
+D:\C#\Mega Project List\Numbers\Find PI to the Nth Digit\bin\Debug\netcoreapp3.1\Find PI to the Nth Digit.dll
+D:\C#\Mega Project List\Numbers\Find PI to the Nth Digit\bin\Debug\netcoreapp3.1\Find PI to the Nth Digit.pdb
+D:\C#\Mega Project List\Numbers\Find PI to the Nth Digit\obj\Debug\netcoreapp3.1\Find PI to the Nth Digit.csprojAssemblyReference.cache
+D:\C#\Mega Project List\Numbers\Find PI to the Nth Digit\obj\Debug\netcoreapp3.1\Find PI to the Nth Digit.AssemblyInfoInputs.cache
+D:\C#\Mega Project List\Numbers\Find PI to the Nth Digit\obj\Debug\netcoreapp3.1\Find PI to the Nth Digit.AssemblyInfo.cs
+D:\C#\Mega Project List\Numbers\Find PI to the Nth Digit\obj\Debug\netcoreapp3.1\Find PI to the Nth Digit.csproj.CoreCompileInputs.cache
+D:\C#\Mega Project List\Numbers\Find PI to the Nth Digit\obj\Debug\netcoreapp3.1\Find PI to the Nth Digit.dll
+D:\C#\Mega Project List\Numbers\Find PI to the Nth Digit\obj\Debug\netcoreapp3.1\Find PI to the Nth Digit.pdb
+D:\C#\Mega Project List\Numbers\Find PI to the Nth Digit\obj\Debug\netcoreapp3.1\Find PI to the Nth Digit.genruntimeconfig.cache
