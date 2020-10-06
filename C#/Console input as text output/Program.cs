@@ -12,6 +12,14 @@ namespace Console_input_as_text_output
             input = Console.ReadLine();
 
             File.WriteAllText("Text Document.txt", input);
+            
+
+
+            switch ()
+            {
+                default:
+                    break;
+            }
         }
     }
 }
