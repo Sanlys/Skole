@@ -7,8 +7,8 @@ namespace Change_Return_Program
     {
         static void Main(string[] args)
         {
-            decimal[] amounts = { 0m, 0m, 0m, 0m, 0m };
-            decimal[] values = { 1m, 0.25m, 0.1m, 0.05m, 0.01m };
+            decimal[] amounts = {0m, 0m, 0m, 0m, 0m };
+            decimal[] values = {1m, 0.25m, 0.1m, 0.05m, 0.01m };
 
             decimal val;
             decimal cost;
@@ -20,13 +20,16 @@ namespace Change_Return_Program
             Console.WriteLine("Enter payment");
             val = Convert.ToDecimal(Console.ReadLine());
 
-            
-            
-            foreach (int i in amounts)
+            change = val - cost;
+
+            foreach(int i in values)
             {
-                Console.WriteLine("Amounts: " + i.ToString());
-                Console.WriteLine("Val: " + val);
-                Console.WriteLine("Change: " + change);
+                while (change >= values[i])
+                {
+                    amounts[i] = Math.Truncate((change / values[i]));
+                    change %= values[i];
+                    Console.WriteLine(amounts[i]);
+                }
             }
         }
     }
