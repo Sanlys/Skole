@@ -7,31 +7,26 @@ namespace Change_Return_Program
     {
         static void Main(string[] args)
         {
-            double[] amounts = { 0, 0, 0, 0, 0 };
-            double[] values = { 1, 0.25, 0.1, 0.05, 0.01 };
+            decimal[] amounts = { 0m, 0m, 0m, 0m, 0m };
+            decimal[] values = { 1m, 0.25m, 0.1m, 0.05m, 0.01m };
 
-            double val;
-            double cost;
+            decimal val;
+            decimal cost;
+            decimal change;
 
             Console.WriteLine("Enter cost");
-            cost = Convert.ToDouble(Console.ReadLine());
+            cost = Convert.ToDecimal(Console.ReadLine());
 
             Console.WriteLine("Enter payment");
-            val = Convert.ToDouble(Console.ReadLine()) - cost;
+            val = Convert.ToDecimal(Console.ReadLine());
 
-            for (int x = 0; amounts.Length <= x; x++)
-            {
-                while (val % values[x] == 0 && val != 0)
-                {
-                    val -= values[x];
-                    amounts[x] += values[x];
-                }
-            }
+            
             
             foreach (int i in amounts)
             {
                 Console.WriteLine("Amounts: " + i.ToString());
                 Console.WriteLine("Val: " + val);
+                Console.WriteLine("Change: " + change);
             }
         }
     }
