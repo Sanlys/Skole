@@ -12,6 +12,7 @@ namespace Text_Editor
                 Console.WriteLine("1: Write to new file");
                 Console.WriteLine("2: Append something to text file");
                 Console.WriteLine("3. View text file");
+                Console.WriteLine("4. Get information about the file");
                 int decision = Convert.ToInt32(Console.ReadLine());
 
                 switch (decision)
@@ -27,23 +28,35 @@ namespace Text_Editor
                         File.WriteAllText(name, input);
                         break;
                     case 2:
-                        string input2;
                         Console.WriteLine("Enter directory of text file");
                         string directory = Console.ReadLine();
-                        string text2 = File.ReadAllText(directory);
+                        string text = File.ReadAllText(directory);
                         Console.WriteLine("");
-                        Console.WriteLine(text2);
+                        Console.WriteLine(text);
                         Console.WriteLine("");
                         Console.Write("Enter something to append to the text document: ");
-                        input2 = Console.ReadLine();
-                        File.AppendAllText(directory, input2);
+                        input = Console.ReadLine();
+                        File.AppendAllText(directory, input);
                         break;
                     case 3:
                         Console.WriteLine("Enter directory of text file");
-                        string directory2 = Console.ReadLine();
-                        string text3 = File.ReadAllText(directory2);
+                        directory = Console.ReadLine();
+                        text = File.ReadAllText(directory);
                         Console.WriteLine();
-                        Console.WriteLine(text3);
+                        Console.WriteLine(text);
+                        Console.WriteLine();
+                        break;
+                    case 4:
+                        Console.WriteLine("Enter directory of text file");
+                        directory = Console.ReadLine();
+                        Console.WriteLine();
+                        Console.WriteLine("File attributes: " + File.GetAttributes(directory));
+                        Console.WriteLine("File creation time: " + File.GetCreationTime(directory));
+                        Console.WriteLine("File creation time (UTC): " + File.GetCreationTimeUtc(directory));
+                        Console.WriteLine("File last access time: " + File.GetLastAccessTime(directory));
+                        Console.WriteLine("File last access time (UTC): " + File.GetLastAccessTimeUtc(directory));
+                        Console.WriteLine("File last write time: " + File.GetLastWriteTime(directory));
+                        Console.WriteLine("File last write time (UTC): " + File.GetLastWriteTimeUtc(directory));
                         Console.WriteLine();
                         break;
                     default:
