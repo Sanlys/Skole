@@ -14,6 +14,9 @@ namespace Fibonacci_Sequence
             double psiPwr = Math.Pow(psi, input);
             double output = (goldenRatioPwr - psiPwr) / Math.Sqrt(5);
             Console.WriteLine(output);
+
+            Console.WriteLine("Press any key to exit");
+            Console.ReadKey();
         }
     }
 }

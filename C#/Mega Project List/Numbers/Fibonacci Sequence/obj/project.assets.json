@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\C#\\Mega Project List\\Numbers\\Fibonacci Sequence\\Fibonacci Sequence.csproj",
+      "projectUniqueName": "D:\\GitSkole\\Skole\\C#\\Mega Project List\\Numbers\\Fibonacci Sequence\\Fibonacci Sequence.csproj",
       "projectName": "Fibonacci Sequence",
-      "projectPath": "D:\\C#\\Mega Project List\\Numbers\\Fibonacci Sequence\\Fibonacci Sequence.csproj",
+      "projectPath": "D:\\GitSkole\\Skole\\C#\\Mega Project List\\Numbers\\Fibonacci Sequence\\Fibonacci Sequence.csproj",
       "packagesPath": "C:\\Users\\Sander\\.nuget\\packages\\",
-      "outputPath": "D:\\C#\\Mega Project List\\Numbers\\Fibonacci Sequence\\obj\\",
+      "outputPath": "D:\\GitSkole\\Skole\\C#\\Mega Project List\\Numbers\\Fibonacci Sequence\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Sander\\AppData\\Roaming\\NuGet\\NuGet.Config",
