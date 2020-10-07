@@ -1,0 +1,16 @@
+D:\GitSkole\Skole\C#\Shut down on clap\bin\Debug\netcoreapp3.1\Shut down on clap.exe
+D:\GitSkole\Skole\C#\Shut down on clap\obj\Debug\netcoreapp3.1\Shut down on clap.csprojAssemblyReference.cache
+D:\GitSkole\Skole\C#\Shut down on clap\obj\Debug\netcoreapp3.1\Shut down on clap.AssemblyInfoInputs.cache
+D:\GitSkole\Skole\C#\Shut down on clap\obj\Debug\netcoreapp3.1\Shut down on clap.AssemblyInfo.cs
+D:\GitSkole\Skole\C#\Shut down on clap\bin\Debug\netcoreapp3.1\Shut down on clap.deps.json
+D:\GitSkole\Skole\C#\Shut down on clap\bin\Debug\netcoreapp3.1\Shut down on clap.runtimeconfig.json
+D:\GitSkole\Skole\C#\Shut down on clap\bin\Debug\netcoreapp3.1\Shut down on clap.runtimeconfig.dev.json
+D:\GitSkole\Skole\C#\Shut down on clap\bin\Debug\netcoreapp3.1\Shut down on clap.dll
+D:\GitSkole\Skole\C#\Shut down on clap\bin\Debug\netcoreapp3.1\Shut down on clap.pdb
+D:\GitSkole\Skole\C#\Shut down on clap\bin\Debug\netcoreapp3.1\NAudio.dll
+D:\GitSkole\Skole\C#\Shut down on clap\bin\Debug\netcoreapp3.1\System.Resources.Extensions.dll
+D:\GitSkole\Skole\C#\Shut down on clap\obj\Debug\netcoreapp3.1\Shut down on clap.csproj.CoreCompileInputs.cache
+D:\GitSkole\Skole\C#\Shut down on clap\obj\Debug\netcoreapp3.1\Shut down on clap.csproj.CopyComplete
+D:\GitSkole\Skole\C#\Shut down on clap\obj\Debug\netcoreapp3.1\Shut down on clap.dll
+D:\GitSkole\Skole\C#\Shut down on clap\obj\Debug\netcoreapp3.1\Shut down on clap.pdb
+D:\GitSkole\Skole\C#\Shut down on clap\obj\Debug\netcoreapp3.1\Shut down on clap.genruntimeconfig.cache

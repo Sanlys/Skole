@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "EX0BSordGj36X+yyEUIj9eLCP3jVS9ytwrb7DtCwoexDl6+wBlGDgDMQjQ2G7qxG2jsltOLzGm4ezg5XIxGv4Q==",
+  "success": true,
+  "projectFilePath": "D:\\GitSkole\\Skole\\C#\\Shut down on clap\\Shut down on clap.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Sander\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
+    "C:\\Users\\Sander\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
+    "C:\\Users\\Sander\\.nuget\\packages\\naudio\\1.10.0\\naudio.1.10.0.nupkg.sha512",
+    "C:\\Users\\Sander\\.nuget\\packages\\system.resources.extensions\\4.7.0\\system.resources.extensions.4.7.0.nupkg.sha512",
+    "C:\\Users\\Sander\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
+    "C:\\Users\\Sander\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512"
+  ],
+  "logs": []
+}
