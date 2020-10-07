@@ -23,6 +23,7 @@ namespace TextEditorGUI
         {
             InitializeComponent();
             richTextBox1.Font = new Font("Consolas", 12, FontStyle.Regular);
+            
 
             newToolStripMenuItem.Click += (sender, EventArgs) => { OnNew(sender, EventArgs); };
             openToolStripMenuItem.Click += (sender, EventArgs) => { OnOpen(sender, EventArgs); };
@@ -31,6 +32,7 @@ namespace TextEditorGUI
             exitToolStripMenuItem.Click += (sender, EventArgs) => { OnExit(sender, EventArgs); };
             undoToolStripMenuItem.Click += (sender, EventArgs) => { OnUndo(sender, EventArgs); };
             redoToolStripMenuItem.Click += (sender, EventArgs) => { OnRedo(sender, EventArgs); };
+            fontToolStripMenuItem.Click += (sender, EventArgs) => { OnFont(sender, EventArgs); };
         }
 
         private void OnNew(object sender, EventArgs e)
@@ -127,7 +129,31 @@ namespace TextEditorGUI
             richTextBox1.Redo();
         }
 
+        private void OnFont(object sender, EventArgs e)
+        {
+            fontDialog1.ShowColor = true;
+
+            fontDialog1.Font = richTextBox1.Font;
+            fontDialog1.Color = richTextBox1.ForeColor;
+
+            if (fontDialog1.ShowDialog() != DialogResult.Cancel)
+            {
+                richTextBox1.Font = fontDialog1.Font;
+                richTextBox1.ForeColor = fontDialog1.Color;
+            }
+        }
+
         private void RichTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void editToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void fontDialog1_Apply(object sender, EventArgs e)
         {
 
         }
