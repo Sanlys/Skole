@@ -33,6 +33,11 @@ namespace TextEditorGUI
             undoToolStripMenuItem.Click += (sender, EventArgs) => { OnUndo(sender, EventArgs); };
             redoToolStripMenuItem.Click += (sender, EventArgs) => { OnRedo(sender, EventArgs); };
             fontToolStripMenuItem.Click += (sender, EventArgs) => { OnFont(sender, EventArgs); };
+            textBoxBackgroundColorToolStripMenuItem.Click += (sender, EventArgs) => { OnMenustripColor(sender, EventArgs); };
+            lightModeToolStripMenuItem.Click += (sender, EventArgs) => { OnMenustripColor(sender, EventArgs); };
+            darkModeToolStripMenuItem.Click += (sender, EventArgs) => { OnMenustripColor(sender, EventArgs); };
+            fontToolStripMenuItem1.Click += (sender, EventArgs) => { OnThemeFont(sender, EventArgs); };
+            texteditorBackgroundToolStripMenuItem.Click += (sender, EventArgs) => { OnMenustripColor2(sender, EventArgs); };
         }
 
         private void OnNew(object sender, EventArgs e)
@@ -132,7 +137,6 @@ namespace TextEditorGUI
         private void OnFont(object sender, EventArgs e)
         {
             fontDialog1.ShowColor = true;
-
             fontDialog1.Font = richTextBox1.Font;
             fontDialog1.Color = richTextBox1.ForeColor;
 
@@ -143,6 +147,76 @@ namespace TextEditorGUI
             }
         }
 
+        private void OnMenustripColor (object sender, EventArgs e)
+        {
+            colorDialog1.AllowFullOpen = true;
+            colorDialog1.ShowHelp = true;
+
+            if (colorDialog1.ShowDialog() == DialogResult.OK)
+            {
+                menuStrip1.BackColor = colorDialog1.Color;
+                newToolStripMenuItem.BackColor = colorDialog1.Color;
+                openToolStripMenuItem.BackColor = colorDialog1.Color;
+                saveToolStripMenuItem.BackColor = colorDialog1.Color;
+                saveAsToolStripMenuItem.BackColor = colorDialog1.Color;
+                exitToolStripMenuItem.BackColor = colorDialog1.Color;
+                undoToolStripMenuItem.BackColor = colorDialog1.Color;
+                redoToolStripMenuItem.BackColor = colorDialog1.Color;
+                fontToolStripMenuItem.BackColor = colorDialog1.Color;
+                colorsToolStripMenuItem.BackColor = colorDialog1.Color;
+                themesToolStripMenuItem.BackColor = colorDialog1.Color;
+                fontToolStripMenuItem1.BackColor = colorDialog1.Color;
+                toolStripSeparator1.BackColor = colorDialog1.Color;
+                toolStripSeparator2.BackColor = colorDialog1.Color;
+            }
+        }
+        private void OnMenustripColor2(object sender, EventArgs e)
+        {
+            colorDialog1.AllowFullOpen = true;
+            colorDialog1.ShowHelp = true;
+            if (colorDialog1.ShowDialog() == DialogResult.OK)
+            {
+                richTextBox1.BackColor = colorDialog1.Color;
+            }
+            }
+
+            private void OnThemeFont (object sender, EventArgs e)
+        {
+            fontDialog2.ShowColor = true;
+            fontDialog2.MaxSize = Convert.ToInt32(fileToolStripMenuItem.Font.Size);
+            fontDialog2.MinSize = fontDialog2.MaxSize;
+            fontDialog2.Font = menuStrip1.Font;
+            fontDialog2.Color = menuStrip1.ForeColor;
+
+            if (fontDialog2.ShowDialog() != DialogResult.Cancel)
+            {
+                menuStrip1.Font = fontDialog2.Font;
+                menuStrip1.ForeColor = fontDialog2.Color;
+                newToolStripMenuItem.Font = fontDialog2.Font;
+                newToolStripMenuItem.ForeColor = fontDialog2.Color;
+                openToolStripMenuItem.Font = fontDialog2.Font;
+                openToolStripMenuItem.ForeColor = fontDialog2.Color;
+                saveToolStripMenuItem.Font = fontDialog2.Font;
+                saveToolStripMenuItem.ForeColor = fontDialog2.Color;
+                saveAsToolStripMenuItem.Font = fontDialog2.Font;
+                saveAsToolStripMenuItem.ForeColor = fontDialog2.Color;
+                exitToolStripMenuItem.Font = fontDialog2.Font;
+                exitToolStripMenuItem.ForeColor = fontDialog2.Color;
+                undoToolStripMenuItem.Font = fontDialog2.Font;
+                undoToolStripMenuItem.ForeColor = fontDialog2.Color;
+                redoToolStripMenuItem.Font = fontDialog2.Font;
+                redoToolStripMenuItem.ForeColor = fontDialog2.Color;
+                fontToolStripMenuItem.Font = fontDialog2.Font;
+                fontToolStripMenuItem.ForeColor = fontDialog2.Color;
+                colorsToolStripMenuItem.Font = fontDialog2.Font;
+                colorsToolStripMenuItem.ForeColor = fontDialog2.Color;
+                themesToolStripMenuItem.Font = fontDialog2.Font;
+                themesToolStripMenuItem.ForeColor = fontDialog2.Color;
+                fontToolStripMenuItem1.Font = fontDialog2.Font;
+                fontToolStripMenuItem1.ForeColor = fontDialog2.Color;
+            }
+        }
+
         private void RichTextBox1_TextChanged(object sender, EventArgs e)
         {
 
@@ -150,10 +224,35 @@ namespace TextEditorGUI
 
         private void editToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void fontDialog1_Apply(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxBackgroundColorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void fontToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void fontToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripSeparator1_Click(object sender, EventArgs e)
         {
 
         }
