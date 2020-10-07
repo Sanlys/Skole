@@ -11,11 +11,15 @@ using System.IO;
 using System.Drawing.Text;
 using System.Runtime.Remoting.Channels;
 using System.Drawing.Printing;
+using System.Windows.Forms.Design;
+using System.Security.Cryptography.X509Certificates;
 
 namespace TextEditorGUI
 {
     public partial class Form1 : Form
     {
+        
+
 
         string savedPath = string.Empty;
 
@@ -34,8 +38,8 @@ namespace TextEditorGUI
             redoToolStripMenuItem.Click += (sender, EventArgs) => { OnRedo(sender, EventArgs); };
             fontToolStripMenuItem.Click += (sender, EventArgs) => { OnFont(sender, EventArgs); };
             textBoxBackgroundColorToolStripMenuItem.Click += (sender, EventArgs) => { OnMenustripColor(sender, EventArgs); };
-            lightModeToolStripMenuItem.Click += (sender, EventArgs) => { OnMenustripColor(sender, EventArgs); };
-            darkModeToolStripMenuItem.Click += (sender, EventArgs) => { OnMenustripColor(sender, EventArgs); };
+            lightModeToolStripMenuItem.Click += (sender, EventArgs) => { OnLightMode(sender, EventArgs); };
+            darkModeToolStripMenuItem.Click += (sender, EventArgs) => { OnDarkMode(sender, EventArgs); };
             fontToolStripMenuItem1.Click += (sender, EventArgs) => { OnThemeFont(sender, EventArgs); };
             texteditorBackgroundToolStripMenuItem.Click += (sender, EventArgs) => { OnMenustripColor2(sender, EventArgs); };
         }
@@ -166,8 +170,7 @@ namespace TextEditorGUI
                 colorsToolStripMenuItem.BackColor = colorDialog1.Color;
                 themesToolStripMenuItem.BackColor = colorDialog1.Color;
                 fontToolStripMenuItem1.BackColor = colorDialog1.Color;
-                toolStripSeparator1.BackColor = colorDialog1.Color;
-                toolStripSeparator2.BackColor = colorDialog1.Color;
+                numericUpDown1.BackColor = colorDialog1.Color;
             }
         }
         private void OnMenustripColor2(object sender, EventArgs e)
@@ -180,7 +183,7 @@ namespace TextEditorGUI
             }
             }
 
-            private void OnThemeFont (object sender, EventArgs e)
+        private void OnThemeFont (object sender, EventArgs e)
         {
             fontDialog2.ShowColor = true;
             fontDialog2.MaxSize = Convert.ToInt32(fileToolStripMenuItem.Font.Size);
@@ -214,7 +217,123 @@ namespace TextEditorGUI
                 themesToolStripMenuItem.ForeColor = fontDialog2.Color;
                 fontToolStripMenuItem1.Font = fontDialog2.Font;
                 fontToolStripMenuItem1.ForeColor = fontDialog2.Color;
+                numericUpDown1.Font = fontDialog2.Font;
+                numericUpDown1.ForeColor = fontDialog2.Color;
             }
+        }
+
+        private void OnLightMode (object sender, EventArgs e)
+        {
+            FontFamily fam = new FontFamily("Segoe UI");
+            Font font = new Font(fam, 9, FontStyle.Regular);
+            FontFamily fam2 = new FontFamily("Consolas");
+            Font text = new Font(fam2, 12, FontStyle.Regular);
+
+
+            menuStrip1.Font = font;
+            menuStrip1.ForeColor = System.Drawing.Color.Black;
+            newToolStripMenuItem.Font = font;
+            newToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
+            openToolStripMenuItem.Font = font;
+            openToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
+            saveToolStripMenuItem.Font = font;
+            saveToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
+            saveAsToolStripMenuItem.Font = font;
+            saveAsToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
+            exitToolStripMenuItem.Font = font;
+            exitToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
+            undoToolStripMenuItem.Font = font;
+            undoToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
+            redoToolStripMenuItem.Font = font;
+            redoToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
+            fontToolStripMenuItem.Font = font;
+            fontToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
+            colorsToolStripMenuItem.Font = font;
+            colorsToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
+            themesToolStripMenuItem.Font = font;
+            themesToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
+            fontToolStripMenuItem1.Font = font;
+            fontToolStripMenuItem1.ForeColor = System.Drawing.Color.Black;
+            numericUpDown1.Font = font;
+            numericUpDown1.ForeColor = System.Drawing.Color.Black;
+
+            
+
+            richTextBox1.Font = text;
+            richTextBox1.ForeColor = System.Drawing.Color.Black;
+
+            richTextBox1.BackColor = System.Drawing.Color.White;
+
+            menuStrip1.BackColor = System.Drawing.Color.White;
+            newToolStripMenuItem.BackColor = System.Drawing.Color.White;
+            openToolStripMenuItem.BackColor = System.Drawing.Color.White;
+            saveToolStripMenuItem.BackColor = System.Drawing.Color.White;
+            saveAsToolStripMenuItem.BackColor = System.Drawing.Color.White;
+            exitToolStripMenuItem.BackColor = System.Drawing.Color.White;
+            undoToolStripMenuItem.BackColor = System.Drawing.Color.White;
+            redoToolStripMenuItem.BackColor = System.Drawing.Color.White;
+            fontToolStripMenuItem.BackColor = System.Drawing.Color.White;
+            colorsToolStripMenuItem.BackColor = System.Drawing.Color.White;
+            themesToolStripMenuItem.BackColor = System.Drawing.Color.White;
+            fontToolStripMenuItem1.BackColor = System.Drawing.Color.White;
+            numericUpDown1.BackColor = System.Drawing.Color.White;
+        }
+
+        private void OnDarkMode (object sender, EventArgs e)
+        {
+            FontFamily fam = new FontFamily("Segoe UI");
+            Font font = new Font(fam, 9, FontStyle.Regular);
+            FontFamily fam2 = new FontFamily("Consolas");
+            Font text = new Font(fam2, 12, FontStyle.Regular);
+
+
+            menuStrip1.Font = font;
+            menuStrip1.ForeColor = System.Drawing.Color.FromArgb(255, 255, 255, 255);
+            newToolStripMenuItem.Font = font;
+            newToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(255, 255, 255, 255);
+            openToolStripMenuItem.Font = font;
+            openToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(255, 255, 255, 255);
+            saveToolStripMenuItem.Font = font;
+            saveToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(255, 255, 255, 255);
+            saveAsToolStripMenuItem.Font = font;
+            saveAsToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(255, 255, 255, 255);
+            exitToolStripMenuItem.Font = font;
+            exitToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(255, 255, 255, 255);
+            undoToolStripMenuItem.Font = font;
+            undoToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(255, 255, 255, 255);
+            redoToolStripMenuItem.Font = font;
+            redoToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(255, 255, 255, 255);
+            fontToolStripMenuItem.Font = font;
+            fontToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(255, 255, 255, 255);
+            colorsToolStripMenuItem.Font = font;
+            colorsToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(255, 255, 255, 255);
+            themesToolStripMenuItem.Font = font;
+            themesToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(255, 255, 255, 255);
+            fontToolStripMenuItem1.Font = font;
+            fontToolStripMenuItem1.ForeColor = System.Drawing.Color.FromArgb(255, 255, 255, 255);
+            numericUpDown1.Font = font;
+            numericUpDown1.ForeColor = System.Drawing.Color.FromArgb(255, 255, 255, 255);
+
+            
+
+            richTextBox1.Font = text;
+            richTextBox1.ForeColor = System.Drawing.Color.FromArgb(255, 255, 255, 255);
+
+            richTextBox1.BackColor = System.Drawing.Color.FromArgb(255, 18, 18, 18);
+
+            menuStrip1.BackColor = System.Drawing.Color.FromArgb(255, 44, 44, 44);
+            newToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(255, 44, 44, 44);
+            openToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(255, 44, 44, 44);
+            saveToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(255, 44, 44, 44);
+            saveAsToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(255, 44, 44, 44);
+            exitToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(255, 44, 44, 44);
+            undoToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(255, 44, 44, 44);
+            redoToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(255, 44, 44, 44);
+            fontToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(255, 44, 44, 44);
+            colorsToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(255, 44, 44, 44);
+            themesToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(255, 44, 44, 44);
+            fontToolStripMenuItem1.BackColor = System.Drawing.Color.FromArgb(255, 44, 44, 44);
+            numericUpDown1.BackColor = System.Drawing.Color.FromArgb(255, 44, 44, 44);
         }
 
         private void RichTextBox1_TextChanged(object sender, EventArgs e)
@@ -255,6 +374,26 @@ namespace TextEditorGUI
         private void toolStripSeparator1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void alwaysOnTopToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripTextBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripComboBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+            this.Opacity = Convert.ToDouble(numericUpDown1.Value/100);
         }
     }
 }

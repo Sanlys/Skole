@@ -6,8 +6,12 @@ using System.Windows.Forms;
 
 namespace TextEditorGUI
 {
+
     static class Program
     {
+
+
+
         [STAThread]
         static void Main()
         {
