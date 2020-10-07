@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.IO;
 using System.Drawing.Text;
 using System.Runtime.Remoting.Channels;
+using System.Drawing.Printing;
 
 namespace TextEditorGUI
 {
@@ -28,7 +29,8 @@ namespace TextEditorGUI
             saveToolStripMenuItem.Click += (sender, EventArgs) => { OnSave(sender, EventArgs); };
             saveAsToolStripMenuItem.Click += (sender, EventArgs) => { OnSaveAs(sender, EventArgs); };
             exitToolStripMenuItem.Click += (sender, EventArgs) => { OnExit(sender, EventArgs); };
-
+            undoToolStripMenuItem.Click += (sender, EventArgs) => { OnUndo(sender, EventArgs); };
+            redoToolStripMenuItem.Click += (sender, EventArgs) => { OnRedo(sender, EventArgs); };
         }
 
         private void OnNew(object sender, EventArgs e)
@@ -104,15 +106,25 @@ namespace TextEditorGUI
         }
         private void OnExit(object sender, EventArgs e)
         {
-            if(savedPath == string.Empty)
+            if(savedPath == string.Empty && richTextBox1.TextLength != 0)
             {
                 OnSaveAs(sender, e);
-            } else
+            } else if (savedPath != string.Empty && richTextBox1.TextLength != 0)
             {
                 OnSave(sender, e);
             }
 
             System.Windows.Forms.Application.Exit();
+        }
+
+        private void OnUndo(object sender, EventArgs e)
+        {
+            richTextBox1.Undo();
+        }
+
+        private void OnRedo(object sender, EventArgs e)
+        {
+            richTextBox1.Redo();
         }
 
         private void RichTextBox1_TextChanged(object sender, EventArgs e)
