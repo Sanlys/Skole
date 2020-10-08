@@ -42,6 +42,8 @@ namespace TextEditorGUI
             darkModeToolStripMenuItem.Click += (sender, EventArgs) => { OnDarkMode(sender, EventArgs); };
             fontToolStripMenuItem1.Click += (sender, EventArgs) => { OnThemeFont(sender, EventArgs); };
             texteditorBackgroundToolStripMenuItem.Click += (sender, EventArgs) => { OnMenustripColor2(sender, EventArgs); };
+
+            this.richTextBox1.AllowDrop = true;
         }
 
         private void OnNew(object sender, EventArgs e)
@@ -181,7 +183,7 @@ namespace TextEditorGUI
             {
                 richTextBox1.BackColor = colorDialog1.Color;
             }
-            }
+        }
 
         private void OnThemeFont (object sender, EventArgs e)
         {
@@ -336,64 +338,52 @@ namespace TextEditorGUI
             numericUpDown1.BackColor = System.Drawing.Color.FromArgb(255, 44, 44, 44);
         }
 
-        private void RichTextBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void editToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void fontDialog1_Apply(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBoxBackgroundColorToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void fontToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void fontToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void toolStripSeparator1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void alwaysOnTopToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void toolStripTextBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void toolStripComboBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
         {
             this.Opacity = Convert.ToDouble(numericUpDown1.Value/100);
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            this.TopMost = checkBox1.Checked;
+        }
+
+
+
+
+
+        private void listBox1_MouseDown(object sender, System.Windows.Forms.MouseEventArgs e)
+        {
+            // Determines which item was selected.
+            ListBox lb = ((ListBox)sender);
+            Point pt = new Point(e.X, e.Y);
+            //Retrieve the item at the specified location within the ListBox.
+            int index = lb.IndexFromPoint(pt);
+
+            // Starts a drag-and-drop operation.
+            if (index >= 0)
+            {
+                // Retrieve the selected item text to drag into the RichTextBox.
+                lb.DoDragDrop(lb.Items[index].ToString(), DragDropEffects.Copy);
+            }
+        }
+
+        private void richTextBox1_DragEnter(object sender, DragEventArgs e)
+        {
+            // If the data is text, copy the data to the RichTextBox control.
+            if (e.Data.GetDataPresent("Text"))
+                e.Effect = DragDropEffects.Copy;
+        }
+
+        private void richTextBox1_DragDrop(object sender, DragEventArgs e)
+        {
+            // Paste the text into the RichTextBox where at selection location.
+            richTextBox1.SelectedText = e.Data.GetData("System.String", true).ToString();
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -55,6 +55,8 @@ namespace TextEditorGUI
             this.fontDialog2 = new System.Windows.Forms.FontDialog();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.label1 = new System.Windows.Forms.Label();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
@@ -69,10 +71,10 @@ namespace TextEditorGUI
             this.richTextBox1.Size = new System.Drawing.Size(932, 439);
             this.richTextBox1.TabIndex = 0;
             this.richTextBox1.Text = "";
-            this.richTextBox1.TextChanged += new System.EventHandler(this.RichTextBox1_TextChanged);
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.Color.White;
             this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(0, 2, 0, 2);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
@@ -141,7 +143,6 @@ namespace TextEditorGUI
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
             this.editToolStripMenuItem.Size = new System.Drawing.Size(39, 20);
             this.editToolStripMenuItem.Text = "Edit";
-            this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
             // 
             // undoToolStripMenuItem
             // 
@@ -162,7 +163,6 @@ namespace TextEditorGUI
             this.fontToolStripMenuItem.Name = "fontToolStripMenuItem";
             this.fontToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
             this.fontToolStripMenuItem.Text = "Font";
-            this.fontToolStripMenuItem.Click += new System.EventHandler(this.fontToolStripMenuItem_Click);
             // 
             // customizeToolStripMenuItem
             // 
@@ -180,7 +180,7 @@ namespace TextEditorGUI
             this.textBoxBackgroundColorToolStripMenuItem,
             this.texteditorBackgroundToolStripMenuItem});
             this.colorsToolStripMenuItem.Name = "colorsToolStripMenuItem";
-            this.colorsToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
+            this.colorsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.colorsToolStripMenuItem.Text = "Colors";
             // 
             // textBoxBackgroundColorToolStripMenuItem
@@ -188,7 +188,6 @@ namespace TextEditorGUI
             this.textBoxBackgroundColorToolStripMenuItem.Name = "textBoxBackgroundColorToolStripMenuItem";
             this.textBoxBackgroundColorToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
             this.textBoxBackgroundColorToolStripMenuItem.Text = "Menustrip color";
-            this.textBoxBackgroundColorToolStripMenuItem.Click += new System.EventHandler(this.textBoxBackgroundColorToolStripMenuItem_Click);
             // 
             // texteditorBackgroundToolStripMenuItem
             // 
@@ -202,7 +201,7 @@ namespace TextEditorGUI
             this.lightModeToolStripMenuItem,
             this.darkModeToolStripMenuItem});
             this.themesToolStripMenuItem.Name = "themesToolStripMenuItem";
-            this.themesToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
+            this.themesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.themesToolStripMenuItem.Text = "Themes";
             // 
             // lightModeToolStripMenuItem
@@ -220,13 +219,8 @@ namespace TextEditorGUI
             // fontToolStripMenuItem1
             // 
             this.fontToolStripMenuItem1.Name = "fontToolStripMenuItem1";
-            this.fontToolStripMenuItem1.Size = new System.Drawing.Size(115, 22);
+            this.fontToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.fontToolStripMenuItem1.Text = "Font";
-            this.fontToolStripMenuItem1.Click += new System.EventHandler(this.fontToolStripMenuItem1_Click);
-            // 
-            // fontDialog1
-            // 
-            this.fontDialog1.Apply += new System.EventHandler(this.fontDialog1_Apply);
             // 
             // numericUpDown1
             // 
@@ -241,11 +235,33 @@ namespace TextEditorGUI
             0});
             this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(760, 5);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(46, 14);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Opacity";
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(655, 4);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(99, 18);
+            this.checkBox1.TabIndex = 7;
+            this.checkBox1.Text = "Always on top";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(932, 463);
+            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.menuStrip1);
@@ -253,7 +269,6 @@ namespace TextEditorGUI
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
@@ -288,6 +303,8 @@ namespace TextEditorGUI
         private System.Windows.Forms.ToolStripMenuItem texteditorBackgroundToolStripMenuItem;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }
 
