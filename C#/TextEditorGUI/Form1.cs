@@ -18,9 +18,6 @@ namespace TextEditorGUI
 {
     public partial class Form1 : Form
     {
-        
-
-
         string savedPath = string.Empty;
 
         public Form1()
@@ -117,9 +114,10 @@ namespace TextEditorGUI
                 }
             }
         }
+
         private void OnExit(object sender, EventArgs e)
         {
-            if(savedPath == string.Empty && richTextBox1.TextLength != 0)
+            if (savedPath == string.Empty)
             {
                 OnSaveAs(sender, e);
             } else if (savedPath != string.Empty && richTextBox1.TextLength != 0)
@@ -175,6 +173,7 @@ namespace TextEditorGUI
                 numericUpDown1.BackColor = colorDialog1.Color;
             }
         }
+
         private void OnMenustripColor2(object sender, EventArgs e)
         {
             colorDialog1.AllowFullOpen = true;
@@ -258,8 +257,15 @@ namespace TextEditorGUI
             fontToolStripMenuItem1.ForeColor = System.Drawing.Color.Black;
             numericUpDown1.Font = font;
             numericUpDown1.ForeColor = System.Drawing.Color.Black;
+            checkBox1.Font = font;
+            checkBox1.ForeColor = System.Drawing.Color.Black;
+            label1.Font = font;
+            label1.ForeColor = System.Drawing.Color.Black;
+            numericUpDown1.Font = font;
+            numericUpDown1.ForeColor = System.Drawing.Color.Black;
+            textBox1.Font = font;
+            textBox1.ForeColor = System.Drawing.Color.Black;
 
-            
 
             richTextBox1.Font = text;
             richTextBox1.ForeColor = System.Drawing.Color.Black;
@@ -279,6 +285,8 @@ namespace TextEditorGUI
             themesToolStripMenuItem.BackColor = System.Drawing.Color.White;
             fontToolStripMenuItem1.BackColor = System.Drawing.Color.White;
             numericUpDown1.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.White;
+            textBox1.BackColor = System.Drawing.Color.White;
         }
 
         private void OnDarkMode (object sender, EventArgs e)
@@ -313,10 +321,16 @@ namespace TextEditorGUI
             themesToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(255, 255, 255, 255);
             fontToolStripMenuItem1.Font = font;
             fontToolStripMenuItem1.ForeColor = System.Drawing.Color.FromArgb(255, 255, 255, 255);
+            checkBox1.Font = font;
+            checkBox1.ForeColor = System.Drawing.Color.FromArgb(255, 255, 255, 255);
+            label1.Font = font;
+            label1.ForeColor = System.Drawing.Color.FromArgb(255, 255, 255, 255);
             numericUpDown1.Font = font;
             numericUpDown1.ForeColor = System.Drawing.Color.FromArgb(255, 255, 255, 255);
+            textBox1.Font = font;
+            textBox1.ForeColor = System.Drawing.Color.FromArgb(255, 255, 255, 255);
 
-            
+
 
             richTextBox1.Font = text;
             richTextBox1.ForeColor = System.Drawing.Color.FromArgb(255, 255, 255, 255);
@@ -336,6 +350,8 @@ namespace TextEditorGUI
             themesToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(255, 44, 44, 44);
             fontToolStripMenuItem1.BackColor = System.Drawing.Color.FromArgb(255, 44, 44, 44);
             numericUpDown1.BackColor = System.Drawing.Color.FromArgb(255, 44, 44, 44);
+            this.BackColor = System.Drawing.Color.FromArgb(255, 44, 44, 44);
+            textBox1.BackColor = System.Drawing.Color.FromArgb(255, 44, 44, 44);
         }
 
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
@@ -348,41 +364,32 @@ namespace TextEditorGUI
             this.TopMost = checkBox1.Checked;
         }
 
-
-
-
-
-        private void listBox1_MouseDown(object sender, System.Windows.Forms.MouseEventArgs e)
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            // Determines which item was selected.
-            ListBox lb = ((ListBox)sender);
-            Point pt = new Point(e.X, e.Y);
-            //Retrieve the item at the specified location within the ListBox.
-            int index = lb.IndexFromPoint(pt);
+            richTextBox1.Find(toolStripTextBox1.Text);
+        }
 
-            // Starts a drag-and-drop operation.
-            if (index >= 0)
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+            int wordCount = 0, index = 0;
+
+            // skip whitespace until first word
+            while (index < richTextBox1.Text.Length && char.IsWhiteSpace(richTextBox1.Text[index]))
+                index++;
+
+            while (index < richTextBox1.Text.Length)
             {
-                // Retrieve the selected item text to drag into the RichTextBox.
-                lb.DoDragDrop(lb.Items[index].ToString(), DragDropEffects.Copy);
+                // check if current char is part of a word
+                while (index < richTextBox1.Text.Length && !char.IsWhiteSpace(richTextBox1.Text[index]))
+                    index++;
+
+                wordCount++;
+
+                // skip whitespace until next word
+                while (index < richTextBox1.Text.Length && char.IsWhiteSpace(richTextBox1.Text[index]))
+                    index++;
             }
-        }
-
-        private void richTextBox1_DragEnter(object sender, DragEventArgs e)
-        {
-            // If the data is text, copy the data to the RichTextBox control.
-            if (e.Data.GetDataPresent("Text"))
-                e.Effect = DragDropEffects.Copy;
-        }
-
-        private void richTextBox1_DragDrop(object sender, DragEventArgs e)
-        {
-            // Paste the text into the RichTextBox where at selection location.
-            richTextBox1.SelectedText = e.Data.GetData("System.String", true).ToString();
-        }
-
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
+            textBox1.Text = Convert.ToString(wordCount);
 
         }
     }
