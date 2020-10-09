@@ -32,7 +32,6 @@ namespace TextEditorGUI
             saveAsToolStripMenuItem.Click += (sender, EventArgs) => { OnSaveAs(sender, EventArgs); };
             exitToolStripMenuItem.Click += (sender, EventArgs) => { OnExit(sender, EventArgs); };
             undoToolStripMenuItem.Click += (sender, EventArgs) => { OnUndo(sender, EventArgs); };
-            redoToolStripMenuItem.Click += (sender, EventArgs) => { OnRedo(sender, EventArgs); };
             fontToolStripMenuItem.Click += (sender, EventArgs) => { OnFont(sender, EventArgs); };
             textBoxBackgroundColorToolStripMenuItem.Click += (sender, EventArgs) => { OnMenustripColor(sender, EventArgs); };
             lightModeToolStripMenuItem.Click += (sender, EventArgs) => { OnLightMode(sender, EventArgs); };
@@ -40,7 +39,10 @@ namespace TextEditorGUI
             fontToolStripMenuItem1.Click += (sender, EventArgs) => { OnThemeFont(sender, EventArgs); };
             texteditorBackgroundToolStripMenuItem.Click += (sender, EventArgs) => { OnMenustripColor2(sender, EventArgs); };
 
-            this.richTextBox1.AllowDrop = true;
+            richTextBox1.AllowDrop = true;
+            richTextBox1.DragOver += new DragEventHandler(textBox1_DragDrop);
+            richTextBox1.DragEnter += new DragEventHandler(textBox1_DragEnter);
+
         }
 
         private void OnNew(object sender, EventArgs e)
@@ -125,17 +127,12 @@ namespace TextEditorGUI
                 OnSave(sender, e);
             }
 
-            System.Windows.Forms.Application.Exit();
+            this.Close();
         }
 
         private void OnUndo(object sender, EventArgs e)
         {
             richTextBox1.Undo();
-        }
-
-        private void OnRedo(object sender, EventArgs e)
-        {
-            richTextBox1.Redo();
         }
 
         private void OnFont(object sender, EventArgs e)
@@ -165,7 +162,6 @@ namespace TextEditorGUI
                 saveAsToolStripMenuItem.BackColor = colorDialog1.Color;
                 exitToolStripMenuItem.BackColor = colorDialog1.Color;
                 undoToolStripMenuItem.BackColor = colorDialog1.Color;
-                redoToolStripMenuItem.BackColor = colorDialog1.Color;
                 fontToolStripMenuItem.BackColor = colorDialog1.Color;
                 colorsToolStripMenuItem.BackColor = colorDialog1.Color;
                 themesToolStripMenuItem.BackColor = colorDialog1.Color;
@@ -208,8 +204,6 @@ namespace TextEditorGUI
                 exitToolStripMenuItem.ForeColor = fontDialog2.Color;
                 undoToolStripMenuItem.Font = fontDialog2.Font;
                 undoToolStripMenuItem.ForeColor = fontDialog2.Color;
-                redoToolStripMenuItem.Font = fontDialog2.Font;
-                redoToolStripMenuItem.ForeColor = fontDialog2.Color;
                 fontToolStripMenuItem.Font = fontDialog2.Font;
                 fontToolStripMenuItem.ForeColor = fontDialog2.Color;
                 colorsToolStripMenuItem.Font = fontDialog2.Font;
@@ -245,8 +239,6 @@ namespace TextEditorGUI
             exitToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             undoToolStripMenuItem.Font = font;
             undoToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
-            redoToolStripMenuItem.Font = font;
-            redoToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             fontToolStripMenuItem.Font = font;
             fontToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             colorsToolStripMenuItem.Font = font;
@@ -265,6 +257,14 @@ namespace TextEditorGUI
             numericUpDown1.ForeColor = System.Drawing.Color.Black;
             textBox1.Font = font;
             textBox1.ForeColor = System.Drawing.Color.Black;
+            textBox2.Font = font;
+            textBox2.ForeColor = System.Drawing.Color.Black;
+            textBox3.Font = font;
+            textBox3.ForeColor = System.Drawing.Color.Black;
+            label2.Font = font;
+            label2.ForeColor = System.Drawing.Color.Black;
+            label3.Font = font;
+            label3.ForeColor = System.Drawing.Color.Black;
 
 
             richTextBox1.Font = text;
@@ -279,7 +279,6 @@ namespace TextEditorGUI
             saveAsToolStripMenuItem.BackColor = System.Drawing.Color.White;
             exitToolStripMenuItem.BackColor = System.Drawing.Color.White;
             undoToolStripMenuItem.BackColor = System.Drawing.Color.White;
-            redoToolStripMenuItem.BackColor = System.Drawing.Color.White;
             fontToolStripMenuItem.BackColor = System.Drawing.Color.White;
             colorsToolStripMenuItem.BackColor = System.Drawing.Color.White;
             themesToolStripMenuItem.BackColor = System.Drawing.Color.White;
@@ -287,6 +286,10 @@ namespace TextEditorGUI
             numericUpDown1.BackColor = System.Drawing.Color.White;
             this.BackColor = System.Drawing.Color.White;
             textBox1.BackColor = System.Drawing.Color.White;
+            label2.BackColor = System.Drawing.Color.White;
+            textBox2.BackColor = System.Drawing.Color.White;
+            label3.BackColor = System.Drawing.Color.White;
+            textBox3.BackColor = System.Drawing.Color.White;
         }
 
         private void OnDarkMode (object sender, EventArgs e)
@@ -311,8 +314,6 @@ namespace TextEditorGUI
             exitToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(255, 255, 255, 255);
             undoToolStripMenuItem.Font = font;
             undoToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(255, 255, 255, 255);
-            redoToolStripMenuItem.Font = font;
-            redoToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(255, 255, 255, 255);
             fontToolStripMenuItem.Font = font;
             fontToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(255, 255, 255, 255);
             colorsToolStripMenuItem.Font = font;
@@ -329,6 +330,14 @@ namespace TextEditorGUI
             numericUpDown1.ForeColor = System.Drawing.Color.FromArgb(255, 255, 255, 255);
             textBox1.Font = font;
             textBox1.ForeColor = System.Drawing.Color.FromArgb(255, 255, 255, 255);
+            textBox2.Font = font;
+            textBox2.ForeColor = System.Drawing.Color.FromArgb(255, 255, 255, 255);
+            textBox3.Font = font;
+            textBox3.ForeColor = System.Drawing.Color.FromArgb(255, 255, 255, 255);
+            label2.Font = font;
+            label2.ForeColor = System.Drawing.Color.FromArgb(255, 255, 255, 255);
+            label3.Font = font;
+            label3.ForeColor = System.Drawing.Color.FromArgb(255, 255, 255, 255);
 
 
 
@@ -344,7 +353,6 @@ namespace TextEditorGUI
             saveAsToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(255, 44, 44, 44);
             exitToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(255, 44, 44, 44);
             undoToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(255, 44, 44, 44);
-            redoToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(255, 44, 44, 44);
             fontToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(255, 44, 44, 44);
             colorsToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(255, 44, 44, 44);
             themesToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(255, 44, 44, 44);
@@ -352,21 +360,20 @@ namespace TextEditorGUI
             numericUpDown1.BackColor = System.Drawing.Color.FromArgb(255, 44, 44, 44);
             this.BackColor = System.Drawing.Color.FromArgb(255, 44, 44, 44);
             textBox1.BackColor = System.Drawing.Color.FromArgb(255, 44, 44, 44);
+            textBox2.BackColor = System.Drawing.Color.FromArgb(255, 44, 44, 44);
+            textBox3.BackColor = System.Drawing.Color.FromArgb(255, 44, 44, 44);
+            label2.BackColor = System.Drawing.Color.FromArgb(255, 44, 44, 44);
+            label3.BackColor = System.Drawing.Color.FromArgb(255, 44, 44, 44);
         }
 
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
         {
-            this.Opacity = Convert.ToDouble(numericUpDown1.Value/100);
+            ((Main)Application.OpenForms["Main"]).Opacity = Convert.ToDouble(numericUpDown1.Value/100);
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
             this.TopMost = checkBox1.Checked;
-        }
-
-        private void toolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            richTextBox1.Find(toolStripTextBox1.Text);
         }
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
@@ -392,5 +399,31 @@ namespace TextEditorGUI
             textBox1.Text = Convert.ToString(wordCount);
 
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+             richTextBox1.Text = richTextBox1.Text.Replace(textBox2.Text, textBox3.Text);
+        }
+
+        private void textBox1_DragDrop(object sender, DragEventArgs e)
+        {
+            if (e.Data.GetDataPresent(DataFormats.FileDrop, false) == true)
+            {
+                if (e.Data.GetDataPresent(DataFormats.FileDrop))
+                    e.Effect = DragDropEffects.All;
+                else
+                    e.Effect = DragDropEffects.None;
+            }
+        }
+
+        private void textBox1_DragEnter(object sender, DragEventArgs e)
+        {
+            string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
+            if (files != null && files.Length != 0)
+            {
+                savedPath = files[0];
+                richTextBox1.Text = File.ReadAllText(savedPath);
+            }
+        }
     }
-} 
+}

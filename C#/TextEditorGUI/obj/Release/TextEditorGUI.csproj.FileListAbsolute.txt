@@ -8,3 +8,4 @@ D:\GitSkole\Skole\C#\TextEditorGUI\obj\Release\TextEditorGUI.csproj.GenerateReso
 D:\GitSkole\Skole\C#\TextEditorGUI\obj\Release\TextEditorGUI.csproj.CoreCompileInputs.cache
 D:\GitSkole\Skole\C#\TextEditorGUI\obj\Release\TextEditorGUI.exe
 D:\GitSkole\Skole\C#\TextEditorGUI\obj\Release\TextEditorGUI.pdb
+D:\GitSkole\Skole\C#\TextEditorGUI\obj\Release\TextEditorGUI.Main.resources
