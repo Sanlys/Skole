@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace DocumentEditor
 {
@@ -15,6 +16,16 @@ namespace DocumentEditor
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void tabPage2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+            richTextBox1.SaveFile("C:/Users/Sander/Desktop/output.rtf");
         }
     }
 }
