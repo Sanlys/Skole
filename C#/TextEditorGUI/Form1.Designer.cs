@@ -220,7 +220,7 @@ namespace TextEditorGUI
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(760, 7);
+            this.label1.Location = new System.Drawing.Point(483, 7);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(46, 14);
             this.label1.TabIndex = 5;
@@ -229,7 +229,7 @@ namespace TextEditorGUI
             // numericUpDown1
             // 
             this.numericUpDown1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.numericUpDown1.Location = new System.Drawing.Point(809, 5);
+            this.numericUpDown1.Location = new System.Drawing.Point(532, 5);
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(120, 21);
             this.numericUpDown1.TabIndex = 4;
@@ -243,7 +243,7 @@ namespace TextEditorGUI
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(655, 6);
+            this.checkBox1.Location = new System.Drawing.Point(378, 6);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(99, 18);
             this.checkBox1.TabIndex = 7;
@@ -270,7 +270,7 @@ namespace TextEditorGUI
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(571, 4);
+            this.button1.Location = new System.Drawing.Point(294, 4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(78, 23);
             this.button1.TabIndex = 13;
@@ -281,7 +281,7 @@ namespace TextEditorGUI
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(453, 8);
+            this.label3.Location = new System.Drawing.Point(176, 8);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(47, 14);
             this.label3.TabIndex = 12;
@@ -290,7 +290,7 @@ namespace TextEditorGUI
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(339, 8);
+            this.label2.Location = new System.Drawing.Point(62, 8);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(33, 14);
             this.label2.TabIndex = 11;
@@ -298,14 +298,14 @@ namespace TextEditorGUI
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(506, 5);
+            this.textBox3.Location = new System.Drawing.Point(229, 5);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(59, 21);
             this.textBox3.TabIndex = 10;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(378, 4);
+            this.textBox2.Location = new System.Drawing.Point(101, 4);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(59, 21);
             this.textBox2.TabIndex = 9;
@@ -320,6 +320,7 @@ namespace TextEditorGUI
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(932, 410);
             this.richTextBox1.TabIndex = 10;
+            this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged_1);
             // 
             // Form1
             // 
@@ -335,7 +336,6 @@ namespace TextEditorGUI
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Form1";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();

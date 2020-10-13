@@ -20,19 +20,21 @@ namespace TextEditorGUI
             formarray[0] = new Form1();
             formarray[0].MdiParent = this;
             formarray[0].Show();
+            formarray[1] = new Form1();
+            formarray[1].MdiParent = this;
+            formarray[1].Show();
             
         }
         private void closeAllWindowToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void newWindowToolStripMenuItem_Click(object sender, EventArgs e)
+        {
             Form1 x = new Form1();
             x.MdiParent = this;
             x.Show();
-
-
-            /*formarray[i] = new Form1();
-            formarray[i].MdiParent = this;
-            formarray[i].Show();
-            i++;*/
         }
     }
 }

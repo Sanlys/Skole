@@ -19,6 +19,7 @@ namespace TextEditorGUI
     public partial class Form1 : Form
     {
         string savedPath = string.Empty;
+        string filePath = "";
 
         public Form1()
         {
@@ -42,7 +43,6 @@ namespace TextEditorGUI
             richTextBox1.AllowDrop = true;
             richTextBox1.DragOver += new DragEventHandler(textBox1_DragDrop);
             richTextBox1.DragEnter += new DragEventHandler(textBox1_DragEnter);
-
         }
 
         private void OnNew(object sender, EventArgs e)
@@ -75,6 +75,10 @@ namespace TextEditorGUI
                     File.WriteAllText(savedPath, richTextBox1.Text);
                 }
             }
+            if (richTextBox1.Text == File.ReadAllText(savedPath))
+            {
+                this.Text = filePath;
+            }
         }
 
         private void OnSave(object sender, EventArgs e)
@@ -96,6 +100,10 @@ namespace TextEditorGUI
                     File.WriteAllText(savedPath, richTextBox1.Text);
                 }
             }
+            if (richTextBox1.Text == File.ReadAllText(savedPath))
+            {
+                this.Text = filePath;
+            }
         }
 
         private void OnOpen(object sender, EventArgs e)
@@ -109,9 +117,10 @@ namespace TextEditorGUI
 
                 if (openFileDialog1.ShowDialog() == DialogResult.OK)
                 {
-                    var filePath = openFileDialog1.FileName;
+                    filePath = openFileDialog1.FileName;
                     savedPath = openFileDialog1.FileName;
                     richTextBox1.Text = (File.ReadAllText(filePath));
+                    this.Text = filePath;
 
                 }
             }
@@ -373,7 +382,7 @@ namespace TextEditorGUI
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            this.TopMost = checkBox1.Checked;
+            ((Main)Application.OpenForms["Main"]).TopMost = checkBox1.Checked;
         }
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
@@ -423,6 +432,14 @@ namespace TextEditorGUI
             {
                 savedPath = files[0];
                 richTextBox1.Text = File.ReadAllText(savedPath);
+            }
+        }
+
+        private void richTextBox1_TextChanged_1(object sender, EventArgs e)
+        {
+            if (richTextBox1.Text != File.ReadAllText(savedPath))
+            {
+                this.Text = filePath + " *";
             }
         }
     }

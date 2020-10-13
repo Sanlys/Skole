@@ -1,0 +1,9 @@
+D:\GitSkole\Skole\C#\DocumentEditor\bin\Debug\DocumentEditor.exe.config
+D:\GitSkole\Skole\C#\DocumentEditor\bin\Debug\DocumentEditor.exe
+D:\GitSkole\Skole\C#\DocumentEditor\bin\Debug\DocumentEditor.pdb
+D:\GitSkole\Skole\C#\DocumentEditor\obj\Debug\DocumentEditor.csprojAssemblyReference.cache
+D:\GitSkole\Skole\C#\DocumentEditor\obj\Debug\DocumentEditor.Properties.Resources.resources
+D:\GitSkole\Skole\C#\DocumentEditor\obj\Debug\DocumentEditor.csproj.GenerateResource.cache
+D:\GitSkole\Skole\C#\DocumentEditor\obj\Debug\DocumentEditor.csproj.CoreCompileInputs.cache
+D:\GitSkole\Skole\C#\DocumentEditor\obj\Debug\DocumentEditor.exe
+D:\GitSkole\Skole\C#\DocumentEditor\obj\Debug\DocumentEditor.pdb
