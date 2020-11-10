@@ -1,0 +1,13 @@
+D:\GitSkole\Skole\C#\TextRPG\obj\Debug\netcoreapp3.1\TextRPG.csprojAssemblyReference.cache
+D:\GitSkole\Skole\C#\TextRPG\obj\Debug\netcoreapp3.1\TextRPG.AssemblyInfoInputs.cache
+D:\GitSkole\Skole\C#\TextRPG\obj\Debug\netcoreapp3.1\TextRPG.AssemblyInfo.cs
+D:\GitSkole\Skole\C#\TextRPG\obj\Debug\netcoreapp3.1\TextRPG.csproj.CoreCompileInputs.cache
+D:\GitSkole\Skole\C#\TextRPG\bin\Debug\netcoreapp3.1\TextRPG.exe
+D:\GitSkole\Skole\C#\TextRPG\bin\Debug\netcoreapp3.1\TextRPG.deps.json
+D:\GitSkole\Skole\C#\TextRPG\bin\Debug\netcoreapp3.1\TextRPG.runtimeconfig.json
+D:\GitSkole\Skole\C#\TextRPG\bin\Debug\netcoreapp3.1\TextRPG.runtimeconfig.dev.json
+D:\GitSkole\Skole\C#\TextRPG\bin\Debug\netcoreapp3.1\TextRPG.dll
+D:\GitSkole\Skole\C#\TextRPG\bin\Debug\netcoreapp3.1\TextRPG.pdb
+D:\GitSkole\Skole\C#\TextRPG\obj\Debug\netcoreapp3.1\TextRPG.dll
+D:\GitSkole\Skole\C#\TextRPG\obj\Debug\netcoreapp3.1\TextRPG.pdb
+D:\GitSkole\Skole\C#\TextRPG\obj\Debug\netcoreapp3.1\TextRPG.genruntimeconfig.cache
