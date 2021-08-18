@@ -1,7 +1,0 @@
-Review, View, Layout, Design
-I'll just go through them and tell you the majority...
-Under review, there's Translate, Language, Thesaurus, Editor, Word Count and Read Aloud.
-Under Layout, there's just tools which help angle the page length and size. Altering the writing margins and zooming in on certain text and zooming back out.
-Under View, it gives different tools helping read the documents. There's vertical reading options, which just show the document as you scroll downwards. Side to Side which presents the document like an actual book, printing layouts.
-Design is just a collection of designs created to change the layout of the page. Some change the text, text colour, page colour, add page borders, change the entire document itself.
-There's also a reference tab, which helps lookup certain words, research words and insert Citations.
