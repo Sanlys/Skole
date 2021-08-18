@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "Find e to the Nth Digit/1.0.0": {
+        "runtime": {
+          "Find e to the Nth Digit.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Find e to the Nth Digit/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

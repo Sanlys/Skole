@@ -1,0 +1,12 @@
+D:\GitSkole\Skole\C#\Mega Project List\Numbers\Fibonacci Sequence\bin\Release\netcoreapp3.1\Fibonacci Sequence.exe
+D:\GitSkole\Skole\C#\Mega Project List\Numbers\Fibonacci Sequence\bin\Release\netcoreapp3.1\Fibonacci Sequence.deps.json
+D:\GitSkole\Skole\C#\Mega Project List\Numbers\Fibonacci Sequence\bin\Release\netcoreapp3.1\Fibonacci Sequence.runtimeconfig.json
+D:\GitSkole\Skole\C#\Mega Project List\Numbers\Fibonacci Sequence\bin\Release\netcoreapp3.1\Fibonacci Sequence.runtimeconfig.dev.json
+D:\GitSkole\Skole\C#\Mega Project List\Numbers\Fibonacci Sequence\bin\Release\netcoreapp3.1\Fibonacci Sequence.dll
+D:\GitSkole\Skole\C#\Mega Project List\Numbers\Fibonacci Sequence\bin\Release\netcoreapp3.1\Fibonacci Sequence.pdb
+D:\GitSkole\Skole\C#\Mega Project List\Numbers\Fibonacci Sequence\obj\Release\netcoreapp3.1\Fibonacci Sequence.AssemblyInfoInputs.cache
+D:\GitSkole\Skole\C#\Mega Project List\Numbers\Fibonacci Sequence\obj\Release\netcoreapp3.1\Fibonacci Sequence.AssemblyInfo.cs
+D:\GitSkole\Skole\C#\Mega Project List\Numbers\Fibonacci Sequence\obj\Release\netcoreapp3.1\Fibonacci Sequence.csproj.CoreCompileInputs.cache
+D:\GitSkole\Skole\C#\Mega Project List\Numbers\Fibonacci Sequence\obj\Release\netcoreapp3.1\Fibonacci Sequence.dll
+D:\GitSkole\Skole\C#\Mega Project List\Numbers\Fibonacci Sequence\obj\Release\netcoreapp3.1\Fibonacci Sequence.pdb
+D:\GitSkole\Skole\C#\Mega Project List\Numbers\Fibonacci Sequence\obj\Release\netcoreapp3.1\Fibonacci Sequence.genruntimeconfig.cache

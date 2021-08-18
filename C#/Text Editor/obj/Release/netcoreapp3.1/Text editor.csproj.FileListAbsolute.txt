@@ -1,0 +1,12 @@
+D:\GitSkole\Skole\C#\Text Editor\bin\Release\netcoreapp3.1\Text editor.exe
+D:\GitSkole\Skole\C#\Text Editor\bin\Release\netcoreapp3.1\Text editor.deps.json
+D:\GitSkole\Skole\C#\Text Editor\bin\Release\netcoreapp3.1\Text editor.runtimeconfig.json
+D:\GitSkole\Skole\C#\Text Editor\bin\Release\netcoreapp3.1\Text editor.runtimeconfig.dev.json
+D:\GitSkole\Skole\C#\Text Editor\bin\Release\netcoreapp3.1\Text editor.dll
+D:\GitSkole\Skole\C#\Text Editor\bin\Release\netcoreapp3.1\Text editor.pdb
+D:\GitSkole\Skole\C#\Text Editor\obj\Release\netcoreapp3.1\Text editor.AssemblyInfoInputs.cache
+D:\GitSkole\Skole\C#\Text Editor\obj\Release\netcoreapp3.1\Text editor.AssemblyInfo.cs
+D:\GitSkole\Skole\C#\Text Editor\obj\Release\netcoreapp3.1\Text editor.csproj.CoreCompileInputs.cache
+D:\GitSkole\Skole\C#\Text Editor\obj\Release\netcoreapp3.1\Text editor.dll
+D:\GitSkole\Skole\C#\Text Editor\obj\Release\netcoreapp3.1\Text editor.pdb
+D:\GitSkole\Skole\C#\Text Editor\obj\Release\netcoreapp3.1\Text editor.genruntimeconfig.cache
